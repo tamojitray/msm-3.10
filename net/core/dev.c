@@ -6023,7 +6023,7 @@ static int dev_cpu_callback(struct notifier_block *nfb,
 		struct napi_struct *napi = list_first_entry(&oldsd->poll_list,
 							struct napi_struct,
 							poll_list);
-
+							
 		list_del_init(&napi->poll_list);
 		if (napi->poll == process_backlog)
 			napi->state = 0;
